@@ -111,27 +111,22 @@ window.addEventListener('DOMContentLoaded', () => {
         e.target.parentNode.submitQuiz()
       }
   })
-  // Countdown timer function
-  function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    var Minutes = 60 * 1,
-        display = document.querySelector('#time');
-    startTimer(Minutes, display);
-};
+  //Countdown timer function
+  //Set time to count down to
+  var countDownTime = new Time("00:01:00").getTime();
+  //Update count down by 1 second
+  const timer = setInterval(function() => {
+    //Find time to count down to
+    var end = 0;
+    var distance = countDownTime - end;
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  result.querySelector('span').textContent = `${output}%`;
+    if(output === score){
+      clearInterval(timer);
+      } else {
+      output++;
+    }
+  }, 10);
 });
