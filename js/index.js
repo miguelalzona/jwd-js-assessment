@@ -44,6 +44,16 @@ window.addEventListener('DOMContentLoaded', () => {
       o: ['Sydney', 'Canberra', 'Melbourne', 'Perth'],
       a: 1,
     },
+    {
+      q:'Who was the first human being to walk on the Moon?',
+      o:['Buzz Aldrin', 'Buzz Lightyear','Neil Armstrong','Michael Collins'],
+      a: 2,
+    },
+    {
+      q:'What is the tallest mountain on planet Earth?',
+      o:['Mt Kilimanjaro, Africa','Mont Blanc, Europe','Mt Kosciuszko, Australia','Mt Everest, Asia'],
+      a: 3,
+    },
   ];
 
   // function to Display the quiz questions and answers from the object
