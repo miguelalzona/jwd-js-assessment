@@ -12,7 +12,7 @@
       2. Add an Event listener for the submit button, which will display the score and highlight 
          the correct answers when the button is clicked. Use the code from lines 67 to 86 to help you.
 
-      3. Add 2 more questions to the app (each question must have 4 options).
+      3. Add 2 more questions to the app (each question must have 4 options). (DONE)
 
       4. Reload the page when the reset button is clicked (hint: search window.location)
 
@@ -97,4 +97,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // call the displayQuiz function
   displayQuiz();
+  //call the resetBtn function//
+  const reset = document.getElementById('btnReset');
+  reset.addEventListener('click', () => {
+    window.location.reload();
+  });
+  
+  // call the submitButton eventListener function
+  const submitQuiz= document.querySelector('#submitQuiz');
+  submitQuiz.type= "submit";
+  submitQuiz.addEventListener('click', (e) =>{
+      if (e.target.nodeName === 'BUTTON') {
+        e.target.parentNode.submitQuiz()
+      }
+  })
 });
