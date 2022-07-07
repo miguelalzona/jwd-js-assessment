@@ -83,9 +83,11 @@ window.addEventListener('DOMContentLoaded', () => {
         let r = `radio_${index}_${i}`;
         liElement = document.querySelector('#' + li);
         radioElement = document.querySelector('#' + r);
-
+         
         if (quizItem.a == i) {
           //change background color of li element here
+          var quizItem =document.getElementById();
+          quizItem.setAttribute('style', 'color: green');
         }
 
         if (radioElement.checked) {
